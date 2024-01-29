@@ -7,17 +7,19 @@ add_compile_definitions(BUILD_NUM=${BUILD_NUMBER})
 
 # Include app source code file(s)
 add_executable(${APP_1_NAME}
-    ${APP_1_SRC_DIRECTORY}/main.c
+    ${APP_1_SRC_DIRECTORY}/main.cpp
 )
 
 # Link to built libraries
 target_link_libraries(${APP_1_NAME} LINK_PUBLIC
     pico_stdlib
+    pico_cyw43_arch_none
+    hardware_gpio
     FreeRTOS)
 
 # Enable/disable STDIO via USB and UART
 pico_enable_stdio_usb(${APP_1_NAME} 1)
-pico_enable_stdio_uart(${APP_1_NAME} 1)
+pico_enable_stdio_uart(${APP_1_NAME} 0)
 
 # Enable extra build products
 pico_add_extra_outputs(${APP_1_NAME})

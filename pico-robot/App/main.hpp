@@ -23,6 +23,8 @@
 // Pico SDK
 #include "pico/stdlib.h"            // Includes `hardware_gpio.h`
 #include "pico/binary_info.h"
+#include "pico/cyw43_arch.h"
+#include "hardware/gpio.h"
 
 
 #ifdef __cplusplus
