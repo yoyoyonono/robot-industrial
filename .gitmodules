@@ -1,0 +1,6 @@
+[submodule "pico-robot/FreeRTOS-Kernel"]
+	path = pico-robot/FreeRTOS-Kernel
+	url = https://github.com/FreeRTOS/FreeRTOS-Kernel.git
+[submodule "pico-robot/pico-sdk"]
+	path = pico-robot/pico-sdk
+	url = https://github.com/raspberrypi/pico-sdk.git
